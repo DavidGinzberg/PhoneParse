@@ -4,19 +4,20 @@ import java.util.Scanner;
 
 /**
  * Created by thook on 10/13/15.
+ * Modified by David Ginzberg 10/13/2015
  */
-public class ParseHTML {
+public class ParsePhoneNumbers {
 
-    private String htmlData;
+    private String documentText;
 
-    public ParseHTML(){
+    public ParsePhoneNumbers(){
 
-        this.htmlData = loadFile();
+        this.documentText = loadFile();
     }
 
     private String loadFile(){
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("Content.html").getFile());
+        File file = new File(classLoader.getResource("Content.txt").getFile());
         StringBuilder result = new StringBuilder("");
 
         try{
@@ -33,12 +34,12 @@ public class ParseHTML {
         return result.toString();
     }
 
-    public String getHtmlData(){
-        return htmlData;
+    public String getDocumentText(){
+        return documentText;
     }
 
     public static void main(String[] args){
-        ParseHTML parseHTML = new ParseHTML();
-        System.out.println(parseHTML.getHtmlData());
+        ParsePhoneNumbers parsePhoneNumbers = new ParsePhoneNumbers();
+        System.out.println(parsePhoneNumbers.getDocumentText());
     }
 }

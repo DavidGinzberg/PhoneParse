@@ -5,3 +5,6 @@
 
 ## Directory-based project format:
 .idea/
+
+## Ignore target directory files:
+.target/
