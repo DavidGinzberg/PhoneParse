@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+
+
 /**
  * Created by thook on 10/13/15.
  * Modified by David Ginzberg 10/13/2015
@@ -38,8 +40,12 @@ public class ParsePhoneNumbers {
         return documentText;
     }
 
+
     public static void main(String[] args){
+
         ParsePhoneNumbers parsePhoneNumbers = new ParsePhoneNumbers();
         System.out.println(parsePhoneNumbers.getDocumentText());
     }
+
+
 }
